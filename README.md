@@ -27,6 +27,7 @@ However the simple voxel space engine calculations are excesive for the GameBoy 
 * Using GBA background mode5 decreases the resolution and allows to switch between 2 frame buffers, increasing the speed.
 * Using the GBA background scaling and scroll featured, we made some "intra-frames" before the final frame is rendered (that takes a couple of frames) making it more fluid.
 * Rotation calculations are fast aproximations of the correct ones, trying to use the **<<** and **>>** shift operations when possible..
+* Main render routine is replicated and modified for each angle rendering, avoiding having to call and return from the conversion functions for every rendered map pixel.
 * Some other code optimizations (like using **<<** and **>>** instead of multiplications) to make it a bit more faster.
 
 ## License
